@@ -312,7 +312,7 @@ const clues = [
 
 function generateClue() {
     const clue_number = document.querySelector("#clue_input").value;
-    // document.querySelector("#clue").innerHTML = clues[parseInt(clue_number) - 1].clue_description;
+    document.querySelector("#clue").innerHTML = clues[parseInt(clue_number) - 1].clue_description;
 
     // fetch("./clues.txt")
     //     .then(response => response.text())
@@ -322,13 +322,13 @@ function generateClue() {
     //     })
     //     .catch(error => console.error("Error reading file:", error));
 
-    fetch("./clues.txt")
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            document.querySelector("#clue").innerHTML = data;
-        })
-        .catch(error => console.error("Error reading file:", error));
+    // fetch("./clues.txt")
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         console.log(data);
+    //         document.querySelector("#clue").innerHTML = data;
+    //     })
+    //     .catch(error => console.error("Error reading file:", error));
 }
 
 document.querySelector("#generate_clue").addEventListener("click", (e) => {
