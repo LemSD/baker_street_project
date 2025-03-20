@@ -11,8 +11,6 @@ body {
     color: #FFFFFF;
     align-items: center;
     justify-content: center;
-
-
 }
 
 #main_screen {
@@ -21,14 +19,14 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 100px;
-    background-image: url("elements-pc.png");
+    background-image: url("assets/elements-pc.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     margin: auto;
-    min-height: 100dvh;
-    height: 100vh;
-    padding-top: 5%;
-
+    height: 300vh;
+    /* min-height: 100dvh; */
+    /* padding-top: 5%; */
 }
 
 #header_container {
@@ -70,7 +68,6 @@ body {
 }
 
 #clue_input {
-    display: flex;
     height: 40px;
     padding: 16px 16px 16px 14px;
     align-items: center;
@@ -90,7 +87,24 @@ body {
 
 }
 
-#clue_input::placeholder {
+.location_input textarea {
+    align-items: center;
+    flex-shrink: 0;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.50);
+    font-family: "Palatino Linotype";
+    background: none;
+    color: #FFFFFF;
+    font-family: "Palatino Linotype";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    width: 300px;
+}
+
+#clue_input::placeholder, .location_input textarea::placeholder {
     color: #7B7B7B;
 }
 
@@ -98,7 +112,7 @@ body {
     border: 2px solid white;
 }
 
-#generate_clue {
+#generate_clue_btn {
     cursor: pointer;
     border-radius: 8px;
     background: #E7C890;
@@ -124,25 +138,48 @@ body {
     align-self: stretch;
 }
 
-#header_container img {
-    /* background: url(<path-to-image>) lightgray 50% / cover no-repeat;*/
+/* .location_input textarea{
+    background: none;
+    width: 300px;
+} */
 
+.location_input label{
+    /* height: 100%; */
+    display: block;
+}
+
+#location_clues_container {
+    display: flex;
+    align-items: flex-end;
+    align-content: center;
+    justify-content: space-evenly;
+    width: 700px;
+    flex-wrap: wrap;
+}
+
+.toggle_clues_btn {
+    cursor: pointer;
+    height: 80px;
+    aspect-ratio: auto;
+}
+
+#hidden_btn {
+    display: none;
+}
+
+#clues_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @media only screen 
 and (max-width : 440px) {
     #main_screen {
-        display: flex;
-        height: 844px;
-        flex-direction: column;
-        align-items: center;
-        gap: 100px;
-        background-image: url("elements.png");
+
+        background-image: url("assets/elements.png");
         background-repeat: no-repeat;
-        background-size: auto;
-        margin: auto;
-        padding-top: 10%;
-    
     }
     body {
         display: flex;
@@ -158,6 +195,10 @@ and (max-width : 440px) {
         color: #FFFFFF;
         align-items: center;
     
+    }
+
+    #location_clues_container {
+        width: 320px;
     }
 }
 

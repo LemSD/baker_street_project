@@ -1,24 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>221 Baker Street: The Master Detective Game</title>
 </head>
+
 <body>
     <div id="main_screen">
         <div id="header_container">
-            <img src="baker street logo.png">
+            <img src="assets/baker street logo.png">
         </div>
 
         <div id="input_container">
             <input type="text" id="clue_input" placeholder="Enter clue no.">
-            <button id="generate_clue">Submit</button>
+            <button id="generate_clue_btn">Submit</button>
             <span id="clue"></span>
         </div>
-    </div>
 
+        <div id="clues_container">
+            <!-- chemist, bank, carriage depot, docks, hotel, locksmith, museum, newsagent, park, pawn broker, theatre, boar's head, scotland's yard, tobacconist -->
+            <div>
+                <img class="toggle_clues_btn" id="visible_btn" src="assets/visible.png">
+                <img class="toggle_clues_btn" id="hidden_btn" src="assets/hidden.png">
+                <!-- <button id="hide_clues_btn">Hide Location Clues</button> -->
+            </div>
+            <div id="location_clues_container">
+                <div class="location_input">
+                    <label for="">Chemist</label>
+                    <textarea id="chemist_input" name="chemist_input" rows="4" cols="40"
+                        placeholder="Enter clue"></textarea>
+                </div>
+                <div class="location_input">
+                    <label for="">Bank</label>
+                    <textarea id="bank_input" name="v" rows="4" cols="40" placeholder="Enter clue"></textarea>
+                </div>
+                <div class="location_input">
+                    <label for="">Carriage Depot</label>
+                    <textarea id="carriage_depot_input" name="carriage_depot_input" rows="4" cols="40"
+                        placeholder="Enter clue"></textarea>
+                </div>
+                <div class="location_input">
+                    <label for="">Docks</label>
+                    <textarea id="docks_input" name="docks_input" rows="4" cols="40"
+                        placeholder="Enter clue"></textarea>
+                </div>
+                <div class="location_input">
+                    <label for="">Hotel</label>
+                    <textarea id="hotel_input" name="hotel_input" rows="4" cols="40"
+                        placeholder="Enter clue"></textarea>
+                </div>
+                <div class="location_input">
+                    <label for="">Locksmith</label>
+                    <textarea id="locksmith_input" name="locksmith_input" rows="4" cols="40"
+                        placeholder="Enter clue"></textarea>
+                </div>
+                <div class="location_input">
+                    <label for="">Museum</label>
+                    <textarea id="museum_input" name="museum_input" rows="4" cols="40"
+                        placeholder="Enter clue"></textarea>
+                </div>
+                <div class="location_input">
+                    <label for="">Newsagent</label>
+                    <textarea id="newsagent_input" name="newsagent_input" rows="4" cols="40"
+                        placeholder="Enter clue"></textarea>
+                </div>
+                <div class="location_input">
+                    <label for="">Park</label>
+                    <textarea id="park_input" name="park_input" rows="4" cols="40" placeholder="Enter clue"></textarea>
+                </div>
+                <div class="location_input">
+                    <label for="">Pawnbroker</label>
+                    <textarea id="pawnbroker_input" name="pawnbroker_input" rows="4" cols="40"
+                        placeholder="Enter clue"></textarea>
+                </div>
+                <div class="location_input">
+                    <label for="">Theatre</label>
+                    <textarea id="theatre_input" name="theatre_input" rows="4" cols="40"
+                        placeholder="Enter clue"></textarea>
+                </div>
+                <div class="location_input">
+                    <label for="">Boar's Head</label>
+                    <textarea id="boarsHead_input" name="boarsHead_input" rows="4" cols="40"
+                        placeholder="Enter clue"></textarea>
+                </div>
+                <div class="location_input">
+                    <label for="">Scotland's Yard</label>
+                    <textarea id="scotlandsYard_input" name="scotlandsYard_input" rows="4" cols="40"
+                        placeholder="Enter clue"></textarea>
+                </div>
+                <div class="location_input">
+                    <label for="">Tobacconist</label>
+                    <textarea id="tobacconist_input" name="tobacconist_input" rows="4" cols="40"
+                        placeholder="Enter clue"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>
